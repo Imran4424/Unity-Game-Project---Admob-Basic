@@ -26,7 +26,10 @@ public class AdsController : MonoBehaviour
 
 	}
 
-	
+	public void ShowTheadd()
+	{
+		
+	}
 
 	private void LoadRewardBasedAd ()
 	{
