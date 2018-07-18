@@ -54,7 +54,10 @@ public class AdsController : MonoBehaviour
 		reward_based.LoadAd (new AdRequest.Builder ().Build (), adUnitId);
 	}
 
-	public event EventHandler<EventArgs> OnAdLoaded;
+	public void HandleOnAdLoaded(object sender, EventArgs args)
+	{
+
+	}
 
 	public event EventHandler<AdFailedToLoadEventArgs> OnAdFailedToLoad;
 
