@@ -34,5 +34,6 @@ public class AdsController : MonoBehaviour
 			string adUnitId = "ca-app-pub-8350504222422488/7241250290";
 		#else
 			string adUnitId = "unexpected_platform";
+		#endif
 	}
 }
