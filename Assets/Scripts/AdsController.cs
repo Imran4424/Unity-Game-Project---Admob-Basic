@@ -34,7 +34,10 @@ public class AdsController : MonoBehaviour
 
 			LoadRewardBasedAd();
 		}
-		
+		else
+		{
+			MonoBehaviour.print("Dude your add's is not loaded yet");
+		}
 	}
 
 	private void LoadRewardBasedAd ()
