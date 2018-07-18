@@ -28,6 +28,12 @@ public class AdsController : MonoBehaviour
 
 	public void ShowTheadd()
 	{
+		if (reward_based.IsLoaded())
+		{
+			reward_based.Show();
+
+			LoadRewardBasedAd();
+		}
 		
 	}
 
