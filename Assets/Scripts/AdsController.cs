@@ -17,7 +17,7 @@ public class AdsController : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-
+		LoadRewardBasedAd();
 	}
 
 	// Update is called once per frame
@@ -25,6 +25,8 @@ public class AdsController : MonoBehaviour
 	{
 
 	}
+
+	
 
 	private void LoadRewardBasedAd ()
 	{
@@ -35,5 +37,7 @@ public class AdsController : MonoBehaviour
 		#else
 			string adUnitId = "unexpected_platform";
 		#endif
+
+		reward_based.LoadAd(new AdRequest.Builder().Build(), adUnitId);
 	}
 }
