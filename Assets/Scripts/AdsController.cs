@@ -78,7 +78,7 @@ public class AdsController : MonoBehaviour
 
 	public void HandleOnAdClosed (object sender, EventArgs args)
 	{
-
+		// crank the party back up
 	}
 
 	public void HandleOnAdRewarded (object sender, Reward args)
