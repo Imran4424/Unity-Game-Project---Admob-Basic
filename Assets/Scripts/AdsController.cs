@@ -79,9 +79,9 @@ public class AdsController : MonoBehaviour
 
 	}
 
-	public void HandleOnAdRewarded()
+	public void HandleOnAdRewarded (object sender, Reward )
 	{
-		
+
 	}
 
 	public event EventHandler<EventArgs> OnAdLeavingApplication;
