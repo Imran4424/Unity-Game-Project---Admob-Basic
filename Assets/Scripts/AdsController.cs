@@ -1,9 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using GoogleMobileAds;
 using GoogleMobileAds.Api;
 using UnityEngine;
-using System;
 
 public class AdsController : MonoBehaviour
 {
@@ -54,19 +54,19 @@ public class AdsController : MonoBehaviour
 		reward_based.LoadAd (new AdRequest.Builder ().Build (), adUnitId);
 	}
 
-	public void HandleOnAdLoaded(object sender, EventArgs args)
+	public void HandleOnAdLoaded (object sender, EventArgs args)
 	{
 
 	}
 
-	public void HandleOnAdFailedToLoad(object sender, AdFailedToLoadEventArgs args)
+	public void HandleOnAdFailedToLoad (object sender, AdFailedToLoadEventArgs args)
 	{
 
 	}
 
-	public void HandleOnAdOpening()
+	public void HandleOnAdOpening (object sender, EventArgs args)
 	{
-		
+
 	}
 
 	public event EventHandler<EventArgs> OnAdStarted;
