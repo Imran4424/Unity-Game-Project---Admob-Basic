@@ -22,6 +22,7 @@ public class AdsController : MonoBehaviour
 		reward_based.OnAdFailedToLoad += HandleOnAdFailedToLoad;
 		reward_based.OnAdLeavingApplication += HandleOnAdLeavingApplication;
 		reward_based.OnAdLoaded += HandleOnAdLoaded;
+		reward_based.OnAdOpening += HandleOnAdOpening;
 
 
 		LoadRewardBasedAd ();
