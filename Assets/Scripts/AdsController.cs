@@ -64,7 +64,10 @@ public class AdsController : MonoBehaviour
 
 	}
 
-	public event EventHandler<EventArgs> OnAdOpening;
+	public void HandleOnAdOpening()
+	{
+		
+	}
 
 	public event EventHandler<EventArgs> OnAdStarted;
 
