@@ -61,12 +61,14 @@ public class AdsController : MonoBehaviour
 
 	public void HandleOnAdFailedToLoad (object sender, AdFailedToLoadEventArgs args)
 	{
+		// try to reload
 
+		LoadRewardBasedAd();
 	}
 
 	public void HandleOnAdOpening (object sender, EventArgs args)
 	{
-
+		// pause the action
 	}
 
 	public void HandleOnAdStarted (object sender, EventArgs args)
