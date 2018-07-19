@@ -18,6 +18,9 @@ public class AdsController : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
+		reward_based.OnAdClosed += HandleOnAdClosed;
+
+
 		LoadRewardBasedAd ();
 	}
 
