@@ -84,6 +84,8 @@ public class AdsController : MonoBehaviour
 	public void HandleOnAdRewarded (object sender, Reward args)
 	{
 		//reward the user
+
+		MonoBehaviour.print(String.Format("You just got {0} {1}!",args.Amount, args.Type));
 	}
 
 	public void HandleOnAdLeavingApplication (object sender, EventArgs args)
