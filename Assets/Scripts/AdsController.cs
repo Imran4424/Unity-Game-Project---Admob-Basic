@@ -59,7 +59,10 @@ public class AdsController : MonoBehaviour
 
 	}
 
-	public event EventHandler<AdFailedToLoadEventArgs> OnAdFailedToLoad;
+	public void HandleOnAdFailedToLoad()
+	{
+		
+	}
 
 	public event EventHandler<EventArgs> OnAdOpening;
 
