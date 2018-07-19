@@ -24,6 +24,7 @@ public class AdsController : MonoBehaviour
 		reward_based.OnAdLoaded += HandleOnAdLoaded;
 		reward_based.OnAdOpening += HandleOnAdOpening;
 		reward_based.OnAdRewarded += HandleOnAdRewarded;
+		reward_based.OnAdStarted += HandleOnAdStarted;
 
 
 		LoadRewardBasedAd ();
