@@ -79,7 +79,7 @@ public class AdsController : MonoBehaviour
 
 	}
 
-	public void HandleOnAdRewarded (object sender, Reward )
+	public void HandleOnAdRewarded (object sender, Reward args)
 	{
 
 	}
