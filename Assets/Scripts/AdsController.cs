@@ -83,7 +83,7 @@ public class AdsController : MonoBehaviour
 
 	public void HandleOnAdRewarded (object sender, Reward args)
 	{
-
+		//reward the user
 	}
 
 	public void HandleOnAdLeavingApplication (object sender, EventArgs args)
