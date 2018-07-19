@@ -84,7 +84,10 @@ public class AdsController : MonoBehaviour
 
 	}
 
-	public event EventHandler<EventArgs> OnAdLeavingApplication;
+	public void HandleOnAdLeavingApplication()
+	{
+		
+	}
 
 	public event EventHandler<EventArgs> OnAdCompleted;
 
