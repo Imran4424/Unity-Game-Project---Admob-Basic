@@ -69,7 +69,10 @@ public class AdsController : MonoBehaviour
 
 	}
 
-	public event EventHandler<EventArgs> OnAdStarted;
+	public void HandleOnAdStarted()
+	{
+		
+	}
 
 	public event EventHandler<EventArgs> OnAdClosed;
 
