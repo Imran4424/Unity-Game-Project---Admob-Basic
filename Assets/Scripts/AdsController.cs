@@ -73,7 +73,7 @@ public class AdsController : MonoBehaviour
 
 	public void HandleOnAdStarted (object sender, EventArgs args)
 	{
-
+		// mute audio
 	}
 
 	public void HandleOnAdClosed (object sender, EventArgs args)
