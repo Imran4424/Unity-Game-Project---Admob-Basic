@@ -89,9 +89,9 @@ public class AdsController : MonoBehaviour
 
 	}
 
-	public void HandleOnAdCompleted()
+	public void HandleOnAdCompleted (object sender, EventArgs args)
 	{
-		
+
 	}
 
 }
