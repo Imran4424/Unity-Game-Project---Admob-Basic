@@ -43,7 +43,7 @@ public class BannerAd : MonoBehaviour
 
 	IEnumerator bannerAdTime ()
 	{
-		yield return new WaitForSeconds (30f);
+		yield return new WaitForSeconds (300f);
 		
 		RequestNewAd();
 	}
