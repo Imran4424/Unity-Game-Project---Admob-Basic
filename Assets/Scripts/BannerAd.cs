@@ -1,8 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using GoogleMobileAds;
 using GoogleMobileAds.Api;
+using UnityEngine;
 
 public class BannerAd : MonoBehaviour
 {
@@ -10,12 +10,12 @@ public class BannerAd : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		showBannerAd();
+		showBannerAd ();
 	}
 
 	private void showBannerAd ()
 	{
-		string adID = "ca-app-pub-3940256099942544/6300978111";
+		string adID = "ca-app-pub-8350504222422488/6121177109";
 
 		//***For Testing in the Device***
 		AdRequest request = new AdRequest.Builder ()
