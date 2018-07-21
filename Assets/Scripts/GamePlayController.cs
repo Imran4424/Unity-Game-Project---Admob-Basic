@@ -6,6 +6,9 @@ using UnityEngine.UI;
 
 public class GamePlayController : MonoBehaviour {
 
+	[SerializeField]
+
+
 	// Use this for initialization
 	void Start () {
 		
@@ -15,6 +18,9 @@ public class GamePlayController : MonoBehaviour {
 	void Update () {
 		
 	}
+
+
+	// changing scene
 
 	public void BackToMainMenu()
 	{
