@@ -47,6 +47,11 @@ public class MainMenuController : MonoBehaviour
 		PlayerPrefs.SetInt(Gem_Score,score);
 	}
 
+	public int GetGemScore()
+	{
+		
+	}
+
 	public void GoToGamePlay ()
 	{
 		SceneManager.LoadScene ("GamePlay", LoadSceneMode.Single);
