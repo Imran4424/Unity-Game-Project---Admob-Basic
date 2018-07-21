@@ -92,6 +92,7 @@
      <Compile Include="Assets\GoogleMobileAds\Platforms\iOS\RewardBasedVideoAdClient.cs" />
      <Compile Include="Assets\GoogleMobileAds\Platforms\iOS\Utils.cs" />
      <Compile Include="Assets\Scripts\AdsController.cs" />
+     <Compile Include="Assets\Scripts\BannerAd.cs" />
      <Compile Include="Assets\Scripts\GamePlayController.cs" />
      <Compile Include="Assets\Scripts\MainMenuController.cs" />
  <Reference Include="UnityEngine.CoreModule">
