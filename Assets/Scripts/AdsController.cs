@@ -101,6 +101,9 @@ public class AdsController : MonoBehaviour
 
 		gem_score++;
 
+		MainMenuController.instance.SetGemScore(gem_score);
+
+		MainMenuController.instance.TextSetGemScore();
 	}
 
 	public void HandleOnAdLeavingApplication (object sender, EventArgs args)
