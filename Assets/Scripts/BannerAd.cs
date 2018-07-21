@@ -10,18 +10,19 @@ public class BannerAd : MonoBehaviour
 	private BannerView bannerView;
 
 	// Use this for initialization
-	void Start ()
+	void Awake ()
 	{
 		string adID = "ca-app-pub-8350504222422488~7708154151";
 
 		MobileAds.Initialize (adID);
 
-		this.showBannerAd ();
+		string adUnitId = "ca-app-pub-8350504222422488/6121177109";
+
+		this.showBannerAd (adUnitId);
 	}
 
-	private void showBannerAd ()
+	private void showBannerAd (string adUnitId)
 	{
-		string adUnitId = "ca-app-pub-8350504222422488/6121177109";
 
 		// Create a 320x50 banner at the bottom of the screen.
 		//bannerView = new BannerView (adUnitId, AdSize.Banner, AdPosition.Bottom);
