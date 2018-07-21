@@ -22,7 +22,7 @@ public class MainMenuController : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-
+		Gem_Score_Text.text = "" + GetGemScore();
 	}
 
 	// Update is called once per frame
