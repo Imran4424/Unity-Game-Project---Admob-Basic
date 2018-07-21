@@ -14,6 +14,11 @@ public class MainMenuController : MonoBehaviour
 	[SerializeField]
 	private Text Gem_Score_Text;
 
+	void Awake()
+	{
+		IsTheGameStartedForTheFirstTime();
+	}
+
 	// Use this for initialization
 	void Start ()
 	{
