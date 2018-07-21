@@ -14,21 +14,30 @@ public class MainMenuController : MonoBehaviour
 	[SerializeField]
 	private Text Gem_Score_Text;
 
-	void Awake()
+	void Awake ()
 	{
-		IsTheGameStartedForTheFirstTime();
+		IsTheGameStartedForTheFirstTime ();
 	}
 
 	// Use this for initialization
 	void Start ()
 	{
-		Gem_Score_Text.text = "" + GetGemScore();
+		TextSetGemScore();
 	}
 
 	// Update is called once per frame
 	void Update ()
 	{
 
+	}
+
+	/*
+		setting the gem score text
+	*/
+
+	public void TextSetGemScore ()
+	{
+		Gem_Score_Text.text = "" + GetGemScore ();
 	}
 
 	/*
@@ -39,7 +48,7 @@ public class MainMenuController : MonoBehaviour
 	{
 		if (!PlayerPrefs.HasKey ("IsTheGameStartedForTheFirstTime"))
 		{
-			PlayerPrefs.SetInt(Gem_Score,10);	
+			PlayerPrefs.SetInt (Gem_Score, 10);
 
 			PlayerPrefs.SetInt ("IsTheGameStartedForTheFirstTime", 0);
 		}
@@ -47,14 +56,14 @@ public class MainMenuController : MonoBehaviour
 
 	// setting and getting gem score
 
-	public void SetGemScore(int score)
+	public void SetGemScore (int score)
 	{
-		PlayerPrefs.SetInt(Gem_Score,score);
+		PlayerPrefs.SetInt (Gem_Score, score);
 	}
 
-	public int GetGemScore()
+	public int GetGemScore ()
 	{
-		return PlayerPrefs.GetInt(Gem_Score);
+		return PlayerPrefs.GetInt (Gem_Score);
 	}
 
 	public void GoToGamePlay ()

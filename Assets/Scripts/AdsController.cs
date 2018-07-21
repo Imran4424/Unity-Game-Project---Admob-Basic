@@ -97,7 +97,10 @@ public class AdsController : MonoBehaviour
 	{
 		//reward the user
 
-		MonoBehaviour.print(String.Format("You just got {0} {1}!",args.Amount, args.Type));
+		int gem_score = MainMenuController.instance.GetGemScore();
+
+		gem_score++;
+
 	}
 
 	public void HandleOnAdLeavingApplication (object sender, EventArgs args)
