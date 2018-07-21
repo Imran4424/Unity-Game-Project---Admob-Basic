@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour {
 
-	
+	public static MainMenuController instance;
 
 	// Use this for initialization
 	void Start () 
