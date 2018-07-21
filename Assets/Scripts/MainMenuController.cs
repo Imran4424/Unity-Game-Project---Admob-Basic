@@ -7,6 +7,8 @@ public class MainMenuController : MonoBehaviour {
 
 	public static MainMenuController instance;
 
+	public const string Gem_Score = "Gem Score";
+
 	// Use this for initialization
 	void Start () 
 	{
