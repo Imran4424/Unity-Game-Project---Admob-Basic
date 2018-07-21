@@ -40,13 +40,27 @@ public class BannerAd : MonoBehaviour
 
 	}
 
-	// Update is called once per frame
-	void Update ()
+	IEnumerator bannerAdTime ()
+	{
+		yield return new WaitForSeconds (30f);
+		
+		RequestNewAd();
+	}
+
+	private void RequestNewAd ()
 	{
 		// Create an empty ad request.
 		AdRequest request = new AdRequest.Builder ().Build ();
 
 		// Load the banner with the request.
 		bannerView.LoadAd (request);
+
+		StartCoroutine(bannerAdTime());
+	}
+
+	// Update is called once per frame
+	void Update ()
+	{
+
 	}
 }
