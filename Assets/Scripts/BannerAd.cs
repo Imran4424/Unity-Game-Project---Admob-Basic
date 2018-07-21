@@ -38,6 +38,7 @@ public class BannerAd : MonoBehaviour
 		// Load the banner with the request.
 		bannerView.LoadAd (request);
 
+		StartCoroutine(bannerAdTime());
 	}
 
 	IEnumerator bannerAdTime ()
