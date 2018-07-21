@@ -103,7 +103,7 @@ public class AdsController : MonoBehaviour
 
 	public void HandleOnAdLeavingApplication (object sender, EventArgs args)
 	{
-
+		
 	}
 
 	public void HandleOnAdCompleted (object sender, EventArgs args)

@@ -41,6 +41,13 @@ public class MainMenuController : MonoBehaviour
 	}
 
 	/*
+		Making singleton
+	*/
+
+	
+
+
+	/*
 		The game is started for first time or not to check that
 	*/
 
