@@ -10,7 +10,7 @@ public class BannerAd : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-
+		showBannerAd();
 	}
 
 	private void showBannerAd ()
@@ -26,7 +26,7 @@ public class BannerAd : MonoBehaviour
 		//***For Production When Submit App***
 		//AdRequest request = new AdRequest.Builder().Build();
 
-		BannerView bannerAd = new BannerView (adID, AdSize.SmartBanner, AdPosition.Top);
+		BannerView bannerAd = new BannerView (adID, AdSize.SmartBanner, AdPosition.Bottom);
 		bannerAd.LoadAd (request);
 	}
 
