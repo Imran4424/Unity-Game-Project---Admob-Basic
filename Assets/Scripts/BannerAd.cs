@@ -7,6 +7,9 @@ using UnityEngine;
 public class BannerAd : MonoBehaviour
 {
 
+	private BannerView bannerView;
+
+
 	// Use this for initialization
 	void Start ()
 	{
