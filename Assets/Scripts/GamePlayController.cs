@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class GamePlayController : MonoBehaviour {
 
 	[SerializeField]
+	private Text GemScoreText;
 
 
 	// Use this for initialization
