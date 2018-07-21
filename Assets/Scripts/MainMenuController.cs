@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class MainMenuController : MonoBehaviour {
+public class MainMenuController : MonoBehaviour
+{
 
 	public static MainMenuController instance;
 
@@ -14,24 +15,28 @@ public class MainMenuController : MonoBehaviour {
 	private Text Gem_Score_Text;
 
 	// Use this for initialization
-	void Start () 
+	void Start ()
 	{
-		
+
 	}
-	
+
 	// Update is called once per frame
-	void Update () 
+	void Update ()
 	{
-		
+
 	}
 
 	/*
 		The game is started for first time or not to check that
 	*/
-	
 
-	public void GoToGamePlay()
+	void IsTheGameStartedForTheFirstTime ()
 	{
-		SceneManager.LoadScene("GamePlay",LoadSceneMode.Single);
+		
+	}
+
+	public void GoToGamePlay ()
+	{
+		SceneManager.LoadScene ("GamePlay", LoadSceneMode.Single);
 	}
 }
