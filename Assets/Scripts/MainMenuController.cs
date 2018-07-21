@@ -49,7 +49,7 @@ public class MainMenuController : MonoBehaviour
 
 	public int GetGemScore()
 	{
-		
+		return PlayerPrefs.GetInt(Gem_Score);
 	}
 
 	public void GoToGamePlay ()
