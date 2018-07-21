@@ -9,6 +9,8 @@ public class GamePlayController : MonoBehaviour {
 	[SerializeField]
 	private Text GemScoreText;
 
+	public static GamePlayController
+
 
 	// Use this for initialization
 	void Start () {
