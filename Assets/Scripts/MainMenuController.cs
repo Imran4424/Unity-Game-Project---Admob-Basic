@@ -32,6 +32,18 @@ public class MainMenuController : MonoBehaviour
 
 	void IsTheGameStartedForTheFirstTime ()
 	{
+		if (!PlayerPrefs.HasKey ("IsTheGameStartedForTheFirstTime"))
+		{
+			PlayerPrefs.SetInt(Gem_Score,10);	
+
+			PlayerPrefs.SetInt ("IsTheGameStartedForTheFirstTime", 0);
+		}
+	}
+
+	// setting and getting gem score
+
+	public void SetGemScore(int score)
+	{
 		
 	}
 
