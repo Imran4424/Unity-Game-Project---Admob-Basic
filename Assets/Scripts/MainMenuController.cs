@@ -11,7 +11,7 @@ public class MainMenuController : MonoBehaviour {
 	public const string Gem_Score = "Gem Score";
 
 	[SerializeField]
-	
+	private Text Gem_Score_Text;
 
 	// Use this for initialization
 	void Start () 
