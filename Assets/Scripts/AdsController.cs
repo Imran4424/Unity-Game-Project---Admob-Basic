@@ -55,13 +55,8 @@ public class AdsController : MonoBehaviour
 
 	private void LoadRewardBasedAd ()
 	{
-#if UNINY_EDITOR
-		string adUnitId = "unused";
-#elif UNITY_ANDROID
+
 		string adUnitId = "ca-app-pub-8350504222422488/7241250290";
-#else
-		string adUnitId = "unexpected_platform";
-#endif
 
 		reward_based.LoadAd (new AdRequest.Builder ().Build (), adUnitId);
 	}
