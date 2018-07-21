@@ -44,7 +44,7 @@ public class MainMenuController : MonoBehaviour
 
 	public void SetGemScore(int score)
 	{
-		
+		PlayerPrefs.SetInt(Gem_Score,score);
 	}
 
 	public void GoToGamePlay ()
