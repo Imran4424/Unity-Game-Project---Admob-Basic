@@ -26,7 +26,7 @@ public class MainMenuController : MonoBehaviour {
 	}
 
 	/*
-	The game is started 
+		The game is started for first time or not to check that
 	*/
 
 	public void GoToGamePlay()
