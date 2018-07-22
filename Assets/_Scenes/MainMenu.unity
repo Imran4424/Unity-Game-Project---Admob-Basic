@@ -350,6 +350,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 275630859}
+  - component: {fileID: 275630861}
   - component: {fileID: 275630860}
   m_Layer: 0
   m_Name: Ads Controller
@@ -372,6 +373,17 @@ Transform:
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &275630860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 275630858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 799d93a5cb5b78f40ae904e72d04de35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &275630861
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -730,7 +742,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 275630860}
+      - m_Target: {fileID: 0}
         m_MethodName: ShowTheAdd
         m_Mode: 1
         m_Arguments:

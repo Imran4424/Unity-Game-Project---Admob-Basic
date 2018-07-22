@@ -13,7 +13,7 @@ public class AdsController : MonoBehaviour
 	void Awake ()
 	{
 		reward_based = RewardBasedVideoAd.Instance;
-		//banner_add = BannerView.Instance;
+		
 	}
 
 	// Use this for initialization
