@@ -21,18 +21,24 @@ public class AdsController : MonoBehaviour
 		// Get singleton reward based video ad reference.
 		this.reward_based = RewardBasedVideoAd.Instance;
 
+		// Called when an ad request has successfully loaded.
+		rewardBasedVideo.OnAdLoaded += HandleRewardBasedVideoLoaded;
+
+		// Called when an ad request failed to load.
+		rewardBasedVideo.OnAdFailedToLoad += HandleRewardBasedVideoFailedToLoad;
+		
+		// Called when an ad is shown.
+		rewardBasedVideo.OnAdOpening += HandleRewardBasedVideoOpened;
+		// Called when the ad starts to play.
+		rewardBasedVideo.OnAdStarted += HandleRewardBasedVideoStarted;
+		// Called when the user should be rewarded for watching a video.
+		rewardBasedVideo.OnAdRewarded += HandleRewardBasedVideoRewarded;
+		// Called when the ad is closed.
+		rewardBasedVideo.OnAdClosed += HandleRewardBasedVideoClosed;
+		// Called when the ad click caused the user to leave the application.
+		rewardBasedVideo.OnAdLeavingApplication += HandleRewardBasedVideoLeftApplication;
+
 		this.RequestRewardBasedVideo ();
-
-		reward_based.OnAdLoaded += HandleOnAdLoaded;
-		reward_based.OnAdFailedToLoad += HandleOnAdFailedToLoad;
-
-		reward_based.OnAdOpening += HandleOnAdOpening;
-		reward_based.OnAdStarted += HandleOnAdStarted;
-		reward_based.OnAdClosed += HandleOnAdClosed;
-		reward_based.OnAdLeavingApplication += HandleOnAdLeavingApplication;
-
-		reward_based.OnAdRewarded += HandleOnAdRewarded;
-
 	}
 
 	// Update is called once per frame
@@ -43,7 +49,7 @@ public class AdsController : MonoBehaviour
 
 	public void ShowTheAdd ()
 	{
-		
+
 	}
 
 	private void RequestRewardBasedVideo ()
@@ -55,8 +61,6 @@ public class AdsController : MonoBehaviour
 		// Load the rewarded video ad with the request.
 		this.reward_based.LoadAd (request, adUnitId);
 	}
-
-	
 
 	public void HandleOnAdLoaded (object sender, EventArgs args)
 	{
