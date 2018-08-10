@@ -33,7 +33,6 @@ public class AdsController : MonoBehaviour
 
 		reward_based.OnAdRewarded += HandleOnAdRewarded;
 
-		LoadRewardBasedAd ();
 	}
 
 	// Update is called once per frame
