@@ -21,6 +21,15 @@ public class BannerAd : MonoBehaviour
 		this.showBannerAd (adUnitId);
 	}
 
+	/*
+	 * It's singleton pattern in C# scripts
+	*/
+
+	void MakeSingleton ()
+	{
+
+	}
+
 	private void showBannerAd (string adUnitId)
 	{
 
