@@ -56,12 +56,20 @@ public class AdsController : MonoBehaviour
 		}
 	}
 
+	private void RequestRewardBasedVideo ()
+	{
+		string adUnitId = "ca-app-pub-8350504222422488/7241250290";
+
+		// Create an empty ad request.
+		AdRequest request = new AdRequest.Builder ().Build ();
+		// Load the rewarded video ad with the request.
+		this.reward_based.LoadAd (request, adUnitId);
+	}
+
 	private void LoadRewardBasedAd ()
 	{
 
-		string adUnitId = "ca-app-pub-8350504222422488/7241250290";
-
-		reward_based.LoadAd (new AdRequest.Builder ().Build (), adUnitId);
+		
 	}
 
 	public void HandleOnAdLoaded (object sender, EventArgs args)
