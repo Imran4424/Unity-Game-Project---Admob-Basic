@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class BannerAd : MonoBehaviour
 {
+	public static BannerAd instance;
 
 	private BannerView bannerView;
 
