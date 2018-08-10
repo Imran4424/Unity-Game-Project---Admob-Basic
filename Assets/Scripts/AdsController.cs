@@ -10,11 +10,14 @@ public class AdsController : MonoBehaviour
 
 	private RewardBasedVideoAd reward_based;
 
-	
-
 	// Use this for initialization
 	void Start ()
 	{
+		string appId = "ca-app-pub-8350504222422488~7708154151";
+
+		// Initialize the Google Mobile Ads SDK.
+		MobileAds.Initialize (appId);
+
 		reward_based.OnAdLoaded += HandleOnAdLoaded;
 		reward_based.OnAdFailedToLoad += HandleOnAdFailedToLoad;
 
@@ -22,9 +25,8 @@ public class AdsController : MonoBehaviour
 		reward_based.OnAdStarted += HandleOnAdStarted;
 		reward_based.OnAdClosed += HandleOnAdClosed;
 		reward_based.OnAdLeavingApplication += HandleOnAdLeavingApplication;
-		
-		reward_based.OnAdRewarded += HandleOnAdRewarded;
 
+		reward_based.OnAdRewarded += HandleOnAdRewarded;
 
 		LoadRewardBasedAd ();
 	}
@@ -66,7 +68,7 @@ public class AdsController : MonoBehaviour
 	{
 		// try to reload
 
-		LoadRewardBasedAd();
+		LoadRewardBasedAd ();
 	}
 
 	public void HandleOnAdOpening (object sender, EventArgs args)
@@ -88,18 +90,18 @@ public class AdsController : MonoBehaviour
 	{
 		//reward the user
 
-		int gem_score = MainMenuController.instance.GetGemScore();
+		int gem_score = MainMenuController.instance.GetGemScore ();
 
 		gem_score++;
 
-		MainMenuController.instance.SetGemScore(gem_score);
+		MainMenuController.instance.SetGemScore (gem_score);
 
-		MainMenuController.instance.TextSetGemScore();
+		MainMenuController.instance.TextSetGemScore ();
 	}
 
 	public void HandleOnAdLeavingApplication (object sender, EventArgs args)
 	{
-		
+
 	}
 
 	public void HandleOnAdCompleted (object sender, EventArgs args)
