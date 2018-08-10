@@ -53,6 +53,10 @@ public class AdsController : MonoBehaviour
 
 	public void ShowTheAdd ()
 	{
+		if (reward_based.IsLoaded ())
+		{
+			reward_based.Show ();
+		}
 
 	}
 
@@ -116,6 +120,5 @@ public class AdsController : MonoBehaviour
 	{
 		MonoBehaviour.print ("HandleRewardBasedVideoLeftApplication event received");
 	}
-
 
 }
