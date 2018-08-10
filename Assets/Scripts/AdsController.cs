@@ -22,21 +22,25 @@ public class AdsController : MonoBehaviour
 		this.reward_based = RewardBasedVideoAd.Instance;
 
 		// Called when an ad request has successfully loaded.
-		rewardBasedVideo.OnAdLoaded += HandleRewardBasedVideoLoaded;
+		reward_based.OnAdLoaded += HandleRewardBasedVideoLoaded;
 
 		// Called when an ad request failed to load.
-		rewardBasedVideo.OnAdFailedToLoad += HandleRewardBasedVideoFailedToLoad;
-		
+		reward_based.OnAdFailedToLoad += HandleRewardBasedVideoFailedToLoad;
+
 		// Called when an ad is shown.
-		rewardBasedVideo.OnAdOpening += HandleRewardBasedVideoOpened;
+		reward_based.OnAdOpening += HandleRewardBasedVideoOpened;
+
 		// Called when the ad starts to play.
-		rewardBasedVideo.OnAdStarted += HandleRewardBasedVideoStarted;
+		reward_based.OnAdStarted += HandleRewardBasedVideoStarted;
+
 		// Called when the user should be rewarded for watching a video.
-		rewardBasedVideo.OnAdRewarded += HandleRewardBasedVideoRewarded;
+		reward_based.OnAdRewarded += HandleRewardBasedVideoRewarded;
+
 		// Called when the ad is closed.
-		rewardBasedVideo.OnAdClosed += HandleRewardBasedVideoClosed;
+		reward_based.OnAdClosed += HandleRewardBasedVideoClosed;
+		
 		// Called when the ad click caused the user to leave the application.
-		rewardBasedVideo.OnAdLeavingApplication += HandleRewardBasedVideoLeftApplication;
+		reward_based.OnAdLeavingApplication += HandleRewardBasedVideoLeftApplication;
 
 		this.RequestRewardBasedVideo ();
 	}
@@ -62,31 +66,45 @@ public class AdsController : MonoBehaviour
 		this.reward_based.LoadAd (request, adUnitId);
 	}
 
-	public void HandleOnAdLoaded (object sender, EventArgs args)
+	public void HandleRewardBasedVideoLoaded (object sender, EventArgs args)
 	{
-
+		MonoBehaviour.print ("HandleRewardBasedVideoLoaded event received");
 	}
 
-	public void HandleOnAdFailedToLoad (object sender, AdFailedToLoadEventArgs args)
+	public void HandleRewardBasedVideoFailedToLoad (object sender, AdFailedToLoadEventArgs args)
 	{
-		// try to reload
-
-		LoadRewardBasedAd ();
+		MonoBehaviour.print (
+			"HandleRewardBasedVideoFailedToLoad event received with message: " +
+			args.Message);
 	}
 
-	public void HandleOnAdOpening (object sender, EventArgs args)
+	public void HandleRewardBasedVideoOpened (object sender, EventArgs args)
 	{
-		// pause the action
+		MonoBehaviour.print ("HandleRewardBasedVideoOpened event received");
 	}
 
-	public void HandleOnAdStarted (object sender, EventArgs args)
+	public void HandleRewardBasedVideoStarted (object sender, EventArgs args)
 	{
-		// mute audio
+		MonoBehaviour.print ("HandleRewardBasedVideoStarted event received");
 	}
 
-	public void HandleOnAdClosed (object sender, EventArgs args)
+	public void HandleRewardBasedVideoClosed (object sender, EventArgs args)
 	{
-		// crank the party back up
+		MonoBehaviour.print ("HandleRewardBasedVideoClosed event received");
+	}
+
+	public void HandleRewardBasedVideoRewarded (object sender, Reward args)
+	{
+		string type = args.Type;
+		double amount = args.Amount;
+		MonoBehaviour.print (
+			"HandleRewardBasedVideoRewarded event received for " +
+			amount.ToString () + " " + type);
+	}
+
+	public void HandleRewardBasedVideoLeftApplication (object sender, EventArgs args)
+	{
+		MonoBehaviour.print ("HandleRewardBasedVideoLeftApplication event received");
 	}
 
 	public void HandleOnAdRewarded (object sender, Reward args)
