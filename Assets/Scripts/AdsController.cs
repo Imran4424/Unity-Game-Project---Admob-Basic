@@ -38,7 +38,7 @@ public class AdsController : MonoBehaviour
 
 		// Called when the ad is closed.
 		reward_based.OnAdClosed += HandleRewardBasedVideoClosed;
-		
+
 		// Called when the ad click caused the user to leave the application.
 		reward_based.OnAdLeavingApplication += HandleRewardBasedVideoLeftApplication;
 
@@ -95,20 +95,12 @@ public class AdsController : MonoBehaviour
 
 	public void HandleRewardBasedVideoRewarded (object sender, Reward args)
 	{
-		string type = args.Type;
+		/* string type = args.Type;
 		double amount = args.Amount;
 		MonoBehaviour.print (
 			"HandleRewardBasedVideoRewarded event received for " +
-			amount.ToString () + " " + type);
-	}
+			amount.ToString () + " " + type); */
 
-	public void HandleRewardBasedVideoLeftApplication (object sender, EventArgs args)
-	{
-		MonoBehaviour.print ("HandleRewardBasedVideoLeftApplication event received");
-	}
-
-	public void HandleOnAdRewarded (object sender, Reward args)
-	{
 		//reward the user
 
 		int gem_score = MainMenuController.instance.GetGemScore ();
@@ -118,6 +110,16 @@ public class AdsController : MonoBehaviour
 		MainMenuController.instance.SetGemScore (gem_score);
 
 		MainMenuController.instance.TextSetGemScore ();
+	}
+
+	public void HandleRewardBasedVideoLeftApplication (object sender, EventArgs args)
+	{
+		MonoBehaviour.print ("HandleRewardBasedVideoLeftApplication event received");
+	}
+
+	public void HandleOnAdRewarded (object sender, Reward args)
+	{
+
 	}
 
 	public void HandleOnAdLeavingApplication (object sender, EventArgs args)
