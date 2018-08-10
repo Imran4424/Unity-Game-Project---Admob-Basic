@@ -117,19 +117,7 @@ public class AdsController : MonoBehaviour
 		MonoBehaviour.print ("HandleRewardBasedVideoLeftApplication event received");
 	}
 
-	public void HandleOnAdRewarded (object sender, Reward args)
-	{
 
-	}
 
-	public void HandleOnAdLeavingApplication (object sender, EventArgs args)
-	{
-
-	}
-
-	public void HandleOnAdCompleted (object sender, EventArgs args)
-	{
-
-	}
 
 }
