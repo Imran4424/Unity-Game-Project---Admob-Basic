@@ -10,6 +10,8 @@ public class AdsController : MonoBehaviour
 
 	private RewardBasedVideoAd reward_based;
 
+	private float deltaTime = 0.0f;
+
 	// Use this for initialization
 	void Start ()
 	{
@@ -48,7 +50,10 @@ public class AdsController : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-
+		// Calculate simple moving average for time to render screen. 0.1 factor used as smoothing
+		// value.
+		
+		this.deltaTime += (Time.deltaTime - this.deltaTime) * 0.1f;
 	}
 
 	public void ShowTheAdd ()
@@ -66,7 +71,7 @@ public class AdsController : MonoBehaviour
 
 		// Create an empty ad request.
 		AdRequest request = new AdRequest.Builder ().Build ();
-		
+
 		// Load the rewarded video ad with the request.
 		this.reward_based.LoadAd (request, adUnitId);
 	}
