@@ -52,15 +52,19 @@ public class AdsController : MonoBehaviour
 	{
 		// Calculate simple moving average for time to render screen. 0.1 factor used as smoothing
 		// value.
-		
+
 		this.deltaTime += (Time.deltaTime - this.deltaTime) * 0.1f;
 	}
 
 	public void ShowTheAdd ()
 	{
-		if (reward_based.IsLoaded ())
+		if (this.reward_based.IsLoaded ())
 		{
-			reward_based.Show ();
+			this.reward_based.Show ();
+		}
+		else
+		{
+			MonoBehaviour.print ("Reward based video ad is not ready yet");
 		}
 
 	}
