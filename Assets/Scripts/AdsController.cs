@@ -21,6 +21,8 @@ public class AdsController : MonoBehaviour
 		// Get singleton reward based video ad reference.
 		this.reward_based = RewardBasedVideoAd.Instance;
 
+		this.RequestRewardBasedVideo ();
+
 		reward_based.OnAdLoaded += HandleOnAdLoaded;
 		reward_based.OnAdFailedToLoad += HandleOnAdFailedToLoad;
 
