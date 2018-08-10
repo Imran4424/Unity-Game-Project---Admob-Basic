@@ -23,11 +23,19 @@ public class BannerAd : MonoBehaviour
 
 	/*
 	 * It's singleton pattern in C# scripts
-	*/
+	 */
 
 	void MakeSingleton ()
 	{
-
+		if (instance != null)
+		{
+			Destroy (gameObject);
+		}
+		else
+		{
+			instance = this;
+			DontDestroyOnLoad (gameObject);
+		}
 	}
 
 	private void showBannerAd (string adUnitId)
