@@ -18,6 +18,9 @@ public class AdsController : MonoBehaviour
 		// Initialize the Google Mobile Ads SDK.
 		MobileAds.Initialize (appId);
 
+		// Get singleton reward based video ad reference.
+		this.reward_based = RewardBasedVideoAd.Instance;
+
 		reward_based.OnAdLoaded += HandleOnAdLoaded;
 		reward_based.OnAdFailedToLoad += HandleOnAdFailedToLoad;
 
