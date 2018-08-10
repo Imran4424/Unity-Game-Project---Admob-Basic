@@ -107,7 +107,7 @@ public class AdsController : MonoBehaviour
 	{
 		MonoBehaviour.print ("HandleRewardBasedVideoClosed event received");
 
-		this.RequestRewardBasedVideo ();
+		//this.RequestRewardBasedVideo ();
 
 	}
 
