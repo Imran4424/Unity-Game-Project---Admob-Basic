@@ -66,6 +66,7 @@ public class AdsController : MonoBehaviour
 
 		// Create an empty ad request.
 		AdRequest request = new AdRequest.Builder ().Build ();
+		
 		// Load the rewarded video ad with the request.
 		this.reward_based.LoadAd (request, adUnitId);
 	}
