@@ -80,6 +80,7 @@ public class AdsController : MonoBehaviour
 		MonoBehaviour.print (
 			"HandleRewardBasedVideoFailedToLoad event received with message: " +
 			args.Message);
+		this.RequestRewardBasedVideo();
 	}
 
 	public void HandleRewardBasedVideoOpened (object sender, EventArgs args)
