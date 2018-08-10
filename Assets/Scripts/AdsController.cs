@@ -44,16 +44,7 @@ public class AdsController : MonoBehaviour
 
 	public void ShowTheAdd ()
 	{
-		if (reward_based.IsLoaded ())
-		{
-			reward_based.Show ();
-
-			LoadRewardBasedAd ();
-		}
-		else
-		{
-			MonoBehaviour.print ("Dude your add's is not loaded yet");
-		}
+		
 	}
 
 	private void RequestRewardBasedVideo ()
@@ -66,11 +57,7 @@ public class AdsController : MonoBehaviour
 		this.reward_based.LoadAd (request, adUnitId);
 	}
 
-	private void LoadRewardBasedAd ()
-	{
-
-		
-	}
+	
 
 	public void HandleOnAdLoaded (object sender, EventArgs args)
 	{
