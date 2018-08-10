@@ -41,7 +41,7 @@ public class BannerAd : MonoBehaviour
 		//StartCoroutine(bannerAdTime());
 	}
 
-	IEnumerator bannerAdTime ()
+	/* IEnumerator bannerAdTime ()
 	{
 		yield return new WaitForSeconds (300f);
 		
@@ -63,5 +63,5 @@ public class BannerAd : MonoBehaviour
 	void Update ()
 	{
 
-	}
+	} */
 }
